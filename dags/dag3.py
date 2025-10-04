@@ -1,8 +1,10 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
+import time
 
 def say_hello():
+    time.sleep(60)
     print("Hello from DAG 3!")
 
 with DAG(
