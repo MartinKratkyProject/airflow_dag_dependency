@@ -3,14 +3,14 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime
 
 def say_hello():
-    print("Hello from DAG 3!")
+    print("Hello from DAG 4!")
 
 with DAG(
-    dag_id="dag3",
+    dag_id="dag4",
     start_date=datetime(2025, 1, 1),
     schedule=None,
     catchup=False
-) as dag3:
+) as dag4:
 
     hello_task = PythonOperator(
         task_id="hello_task",
