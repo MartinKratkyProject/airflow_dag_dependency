@@ -25,12 +25,14 @@ This means **`dag1` triggers `dag2` and `dag3`.**
 ---
 
 ## Usage
-
 Run the script using Python:
 
 ```bash
 python dags/utils/scan_dependencies.py
 ```
+If you have your own airflow instance running, you can copy the /dags/utils/scan_dependencies.py file and:
+    1. Create a new `utils` folder in your dags folder.
+    2. Paste the `scan_dependencies.py` file in the `utils` folder.
 
 The project is using the official Apache Airflow Docker Compose setup, with environment variables configured via .env and env.example.
 
